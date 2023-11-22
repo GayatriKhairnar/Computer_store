@@ -15,7 +15,7 @@ except mysql.connector.Error as err:
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('login.html')
 
 @app.route('/computer_store/login')
 def login():
