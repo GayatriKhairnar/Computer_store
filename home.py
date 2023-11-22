@@ -17,7 +17,7 @@ except mysql.connector.Error as err:
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/computer_store/login')
 def login():
     if username == "admin" and password == "admin":
         return render_template("index.html")
