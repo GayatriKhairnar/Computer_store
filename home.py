@@ -15,7 +15,7 @@ except mysql.connector.Error as err:
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -32,9 +32,9 @@ def login():
         cursor.close()
 
         if user:
-            return render_template("home.html")
+            return render_template("index.html")
         elif username == "admin" and password == "admin":
-            return render_template("/index.html")
+            return render_template("index.html")
         else:
             return "Invalid credentials"
     except mysql.connector.Error as err:
@@ -69,7 +69,7 @@ def signup():
         connection.close()
 
         # Redirect to a success page or login page
-        return render_template("home.html")
+        return render_template("index.html")
 
     except mysql.connector.Error as err:
         # Handle database errors
