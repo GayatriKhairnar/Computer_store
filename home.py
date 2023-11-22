@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for
 import mysql.connector
 app = Flask(__name__)
 
-
+'''
 try:  
     cnx = mysql.connector.connect(
         user='root',
@@ -12,6 +12,7 @@ try:
     )
 except mysql.connector.Error as err:
     print(f"Error: {err}")
+'''
 
 @app.route('/')
 def index():
