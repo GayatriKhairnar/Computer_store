@@ -17,6 +17,11 @@ except mysql.connector.Error as err:
 def index():
     return render_template('index.html')
 
+@app.route('/login')
+def login():
+    if username == "admin" and password == "admin":
+        return render_template("index.html")
+'''
 @app.route('/login', methods=['POST'])
 def login():
     username = request.form['username']
@@ -40,7 +45,7 @@ def login():
     except mysql.connector.Error as err:
         print(f"Error: {err}")
         return "Database error"
-
+'''
 @app.route('/signup', methods=['POST'])
 def signup():
     # Get user input from the form
