@@ -34,7 +34,7 @@ def login():
         if user:
             return render_template("home.html")
         elif username == "admin" and password == "admin":
-            return render_template("/computer_store/templates/index.html")
+            return render_template("/index.html")
         else:
             return "Invalid credentials"
     except mysql.connector.Error as err:
