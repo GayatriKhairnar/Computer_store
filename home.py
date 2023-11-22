@@ -20,6 +20,8 @@ def index():
 
 @app.route('/login')
 def login():
+    username = request.form['username']
+    password = request.form['password']
     if username == "admin" and password == "admin":
         #return redirect(url_for('index'))
         return render_template("index.html")
