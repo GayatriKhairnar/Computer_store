@@ -17,10 +17,11 @@ except mysql.connector.Error as err:
 def index():
     return render_template('login.html')
 
-@app.route('/computer_store/login')
+@app.route('/login')
 def login():
     if username == "admin" and password == "admin":
-        return render_template("index.html")
+        return redirect(url_for('index'))
+        #return render_template("index.html")
 '''
 @app.route('/login', methods=['POST'])
 def login():
