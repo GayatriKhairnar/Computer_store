@@ -82,10 +82,11 @@ def signup():
 @app.route('/signup')
 def signup_():
     return render_template('signup.html')
-
+'''
 @app.route('/login')
 def login_():
     return render_template('login.html')
+'''
 
 @app.route('/cart')
 def cart():
